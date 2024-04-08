@@ -1,0 +1,385 @@
+$background-color-green: #d2f8de;
+$background-color-white: #fff;
+$boxShadow-color: #dcdcdc;
+$boxShadow-colorTwo: #adadad;
+$text-color: #00463c;
+$text-hover-color: #006b4f;
+$text-colorTwo: #000000;
+$border-color: #069f88;
+$border-colorTwo: #dcdcdc;
+
+//----------navbar---------------
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem;
+    background-color: $background-color-white;
+    box-shadow: 0 .1px 4px $boxShadow-color;
+    animation: Show .3s;
+    z-index: 1000;
+}
+
+//-------------tarkhineSvg----------------
+.tarkhineSvg {
+    width: 43%;
+    text-align: center;
+
+    img {
+        width: 70%;
+        margin-right: 2rem;
+    }
+}
+
+//-------------navbarIcons-------------
+.navbarIcons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+
+    .navbarIconsCart {
+        position: relative;
+
+        .navbarIconsCartItemsCounter {
+            position: absolute;
+            line-height: .8rem;
+            top: -.3rem;
+            right: -.2rem;
+            background-color: #138c00;
+            color: $background-color-white;
+            padding: 0 4px;
+            border-radius: 50%;
+            font-size: .7rem;
+            animation: ShowSpan .3s;
+        }
+    }
+    
+    .navbarIconsSearch {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        img {
+            width: 30px;
+            height: 100%;
+            margin-left: .4rem;
+            background-color: $background-color-green;
+            padding: .3rem;
+            border-radius: 4px;
+            display: block;
+        }
+    }
+}
+
+.navbarIconsProfile {
+    display: none;
+    position: relative;
+    background-color: $background-color-green;
+    border-radius: 4px;
+    height: 100%;
+    width: 30px;
+    padding: .1rem;
+    cursor: pointer;
+
+    img {
+        display: block;
+    }
+
+    .navbarIconsProfileImg1 {
+        width: 60%;
+        height: 100%;
+    }
+
+    .navbarIconsProfileImg2 {
+        width: 40%;
+    }
+}
+
+.navbarIconsSearchImg {
+    display: none;
+}
+.navbarIconsProfileImg {
+    display: block;
+}
+
+//=======================Hover Icons======================
+
+//------navbarMenuItemsProfile-----------
+.navbarMenuItemsProfileParent {
+    position: absolute;
+    top: .5rem;
+    left: -.4rem;
+    padding-top: 2rem;
+    cursor: pointer;
+}
+
+.navbarMenuItemsProfile {
+    background-color: $background-color-white;
+    padding: 0 .2rem;
+    list-style-type: none;
+    box-shadow: 1px 0px 2px $boxShadow-colorTwo;
+    width: 125px;
+    opacity: 0;
+    display: none;
+
+    li {
+        display: flex;
+        align-items: center;
+        border-bottom: solid 1px $border-colorTwo;
+        width: 100%;
+    }
+    
+    a {
+        width: 100%;
+        padding: .6rem 0;
+        text-decoration: none;
+        color: $text-colorTwo;
+        margin-right: 4px;
+        font-size: .8rem;
+        transition: all .3s;
+
+        &:hover {
+            color: $text-hover-color;
+            transition: all .3s;
+            font-size: .9rem;
+            padding-right: .5rem;
+            color: $text-hover-color;
+        }
+    }
+}
+
+//----ShowProfile----
+.showProfile {
+    display: block;
+    animation: ShowProfile .4s forwards;
+}
+
+@keyframes ShowProfile {
+    0% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+//-------------navbarBranch-----------
+.navbarBranch {
+    position: relative;
+}
+
+.navbarMenuItemsBranchParents {
+    position: absolute;
+    top: 0;
+    right: -4rem;
+    padding-top: 2rem;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+}
+
+.navbarMenuItemsBranch {
+    background-color: $background-color-white;
+    box-shadow: 1px 0px 4px $boxShadow-colorTwo;
+    padding: 0 .3rem;
+
+    a {
+        border-bottom: 1px solid $border-colorTwo;
+        color: $text-colorTwo;
+        padding: .65em .0rem;
+        width: 110px;
+        font-size: .9rem !important;
+
+        &:hover {
+            padding: .5rem .5rem !important;
+            box-shadow: none !important;
+            font-size: 1rem !important;
+            color: $text-hover-color;
+        }
+    }
+}
+
+.navbarMenuItemsBranchParents2 {
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    padding-top: 2rem;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+}
+
+//-------showBranchMenu--------
+.showBranchMenu {
+    display: block;
+    animation: ShowBranchMenu .4s forwards;
+}
+
+@keyframes ShowBranchMenu {
+    0% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+//===========================================================
+
+//-----------hamburgerMenuField----------
+.hamburgerMenuField {
+    display: block;
+}
+
+//-----------navbarMenuItems--------------
+.navbarMenuItems {
+    display: none;
+    width: 45%;
+
+    img {
+        width: 20px;
+        transition: all .3s;
+        cursor: pointer;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+        margin-left: 4px;
+        transition: all .3s;
+        font-size: 1.1rem;
+
+        &:hover {
+            color: $border-color;
+            box-shadow: 0 2px 0 $border-color ;
+            padding: 0 .5rem;
+            transition: all .3s;
+        }
+
+    }
+}
+
+//--------------#navbarIconsAdd-------------
+#navbarIconsAdd {
+    color: $border-color;
+    box-shadow: 0 2px 0 $border-color ;
+    padding: 0 .5rem;
+    font-weight: bolder;
+}
+
+
+
+//------------------keyframes------------------
+@keyframes Show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes ShowSpan {
+    0% {
+        // opacity: 0;
+        top: 0;
+        right: 0;
+    }
+
+    100% {
+        // opacity: 1;
+        top: -.3rem;
+        right: -.2rem;
+    }
+}
+
+//--------------------------768px-------------------------------
+@media (min-width : 768px) {
+
+    .navbar {
+        padding: 1.2rem 8%;
+    }
+
+    .tarkhineSvg {
+        width: 14%;
+    }
+
+    .navbarIcons {
+            height: 25px;
+    }
+
+    .navbarIconsSearch {
+        img {
+
+            &:nth-child(1) {
+                width: 25px;
+            }
+        }
+    }
+    
+    .navbarIconsProfile {
+        display: flex;
+        padding: 0;
+    }
+
+    .hamburgerMenuField {
+        display: none;
+
+    }
+
+    .navbarMenuItems {
+        display: block;
+    }
+
+    .navbarIconsSearchImg {
+        display: block;
+    }
+    .navbarIconsProfileImg {
+        display: none;
+    }
+}
+
+//------------768px AND 1180px-----------------
+@media (min-width : 768px) and (max-width : 1180px) {
+
+    .navbar {
+        padding: .8rem .5rem;
+    }
+
+    .tarkhineSvg {
+        width: 18%;
+    }
+
+    .navbarMenuItems {
+
+        // width: 0%;
+        a {
+            font-size: .8rem;
+        }
+    }
+
+
+}

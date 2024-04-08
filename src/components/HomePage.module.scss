@@ -1,0 +1,62 @@
+$background-color-green: #66a57b;
+$background-color-white: #fff;
+$text-color: #003a2f;
+$border-color : #779c8c;
+$boxShadow-color: #22473f;
+
+//------------homePage----------------
+.homePage {
+    text-align: center;
+    min-width: 100vw;
+    transition: all .3s;
+    animation: Show .3s;
+}
+
+//---------------keyframes------------------
+@keyframes Show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+//---------------768px-------------------
+@media (min-width : 768px) {
+
+    .homePageMenu {
+
+        li {
+            width: 200px;
+            height: 150px;
+            margin: 1.2rem 2rem;
+        }
+
+        img {
+            width: 140px;
+            height: 140px;
+        }
+
+        p {
+            margin-top: -10px;
+
+            &:hover {
+                width: 60%;
+                font-size: 1.1rem;
+                transition: all .3s;
+            }
+        }
+    }
+}
+
+//--------------768px AND 1180px----------------------
+@media (min-width : 768px) and (max-width : 1180px) {
+
+    .homePageMenu {
+
+        p {
+            margin-top: -18px;
+        }
+    }
+}
